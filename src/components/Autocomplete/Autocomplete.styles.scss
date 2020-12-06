@@ -1,0 +1,15 @@
+.auto-complete {
+    position: relative;
+
+    .search-bar {
+        width: -webkit-fill-available;
+    }
+
+    .close {
+        display: inline-block;
+        position: absolute;
+        width: 20px;
+        cursor: pointer;
+        right: 0px;
+    }
+}

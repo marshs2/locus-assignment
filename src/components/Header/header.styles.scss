@@ -1,0 +1,16 @@
+.header-container {
+    background: lightgray;
+
+    .header {
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+
+    .app-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: azure;
+    }
+}
+

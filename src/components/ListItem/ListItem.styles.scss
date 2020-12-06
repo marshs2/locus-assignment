@@ -1,0 +1,23 @@
+.list-item {
+    border: 1px solid black;
+    cursor: pointer;
+
+    &:focus {
+        border: 1px solid deepskyblue;
+    }
+
+    &:focus, &:hover {
+        background: #fffddc;
+    }
+
+    .highlight {
+        color: cornflowerblue;
+        background: none;
+        font-weight: bold;
+    }
+
+    .userItems {
+        border-top: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+    }
+}
