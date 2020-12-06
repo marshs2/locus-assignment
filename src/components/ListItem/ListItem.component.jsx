@@ -23,7 +23,7 @@ const ListItem = ({user, search, makeSelection, changeSearch, tab, setSearchText
         setTimeout(() => {
             if (listItemRef.current.contains(event.target)) {
                 listItemRef.current.focus();
-                setSearchText(user.name);
+                setSearchText(listItemRef.current.dataset.name);
             }
         });
     }
@@ -36,7 +36,7 @@ const ListItem = ({user, search, makeSelection, changeSearch, tab, setSearchText
                 // Enter
                 if (e.keyCode === 13) {
                     handleClick(user);
-                    setSearchText(user.name);
+                    setSearchText(e.target.dataset.name);
                 }
                 // Down
                 if(e.keyCode === 40 && active.nextSibling) {
@@ -52,6 +52,7 @@ const ListItem = ({user, search, makeSelection, changeSearch, tab, setSearchText
     
     return (
         <div
+            data-name={user.name}
             tabIndex={tab}
             ref={listItemRef}
             onMouseOver={(event) => handleMouseOver(event)}
