@@ -33,13 +33,16 @@ const ListItem = ({user, search, makeSelection, changeSearch, tab, setSearchText
         if (node) {
             node.addEventListener('keydown', function(e) {
                 const active = document.activeElement;
+                // Enter
                 if (e.keyCode === 13) {
                     handleClick(user);
                     setSearchText(user.name);
                 }
+                // Down
                 if(e.keyCode === 40 && active.nextSibling) {
                     active.nextSibling.focus();
                 }
+                // Up
                 if(e.keyCode === 38 && active.previousSibling) {
                     active.previousSibling.focus();
                 }
